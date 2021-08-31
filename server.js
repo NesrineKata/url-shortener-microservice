@@ -7,7 +7,7 @@ const validURL =require("valid-url");
 var bodyParser = require("body-parser");
 const MongoClient = require('mongodb').MongoClient;
 const mongoose=require("mongoose");
-const uri_mongo = "mongodb+srv://dbUser:<hello2019>@cluster0.6sfvl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const uri_mongo = process.env.MONGO_URI;
 const client = new MongoClient(uri_mongo, 
 { useNewUrlParser: true, 
 useUnifiedTopology: true });
